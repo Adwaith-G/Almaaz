@@ -3,145 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Almaaz Arabic – Authentic Arabic Cuisine</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <title>Almaaz Arabic – Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Cairo', sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f8f5f2;
-      color: #222;
+      box-sizing: border-box;
     }
-    header {
-      background-color: #8B4513;
-      color: white;
-      padding: 1rem 2rem;
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #8B4513, #d3b173);
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      color: white;
-      margin-left: 1.5rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      background: url('https://images.unsplash.com/photo-1603035986028-bd4742f80946?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
-      height: 90vh;
-      display: flex;
-      align-items: center;
       justify-content: center;
-      text-align: center;
-      color: white;
+      align-items: center;
+      font-family: 'Cairo', sans-serif;
+      overflow: hidden;
+      color: #fff;
     }
-    .hero h1 {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 2rem;
+
+    .container {
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+      z-index: 1;
+    }
+
+    .container h1 {
       font-size: 3rem;
-      border-radius: 10px;
+      margin-bottom: 1rem;
     }
-    section {
-      padding: 4rem 2rem;
+
+    .container p {
+      font-size: 1.5rem;
+      opacity: 0.9;
     }
-    .menu {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 2rem;
+
+    .bubbles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
     }
-    .dish {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      max-width: 300px;
-      text-align: center;
-      padding: 1.5rem;
+
+    .bubble {
+      position: absolute;
+      bottom: -100px;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      animation: rise 20s infinite ease-in;
     }
-    .dish img {
-      max-width: 100%;
-      border-radius: 10px;
-      height: 200px;
-      object-fit: cover;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    .cta {
-      text-align: center;
-      background-color: #d3b173;
-      padding: 2rem;
-      border-radius: 10px;
-      max-width: 600px;
-      margin: auto;
+
+    @keyframes rise {
+      0% { transform: translateY(0); opacity: 0.3; }
+      100% { transform: translateY(-120vh); opacity: 0; }
     }
-    footer {
-      background-color: #8B4513;
-      color: white;
-      text-align: center;
-      padding: 1.5rem;
-    }
+
+    /* Generate multiple bubbles */
+    .bubble:nth-child(1) { left: 10%; animation-duration: 15s; }
+    .bubble:nth-child(2) { left: 20%; width: 25px; height: 25px; animation-duration: 18s; }
+    .bubble:nth-child(3) { left: 40%; width: 15px; height: 15px; animation-duration: 12s; }
+    .bubble:nth-child(4) { left: 60%; animation-duration: 14s; }
+    .bubble:nth-child(5) { left: 80%; width: 30px; height: 30px; animation-duration: 20s; }
+    .bubble:nth-child(6) { left: 70%; width: 18px; height: 18px; animation-duration: 16s; }
+    .bubble:nth-child(7) { left: 50%; width: 22px; height: 22px; animation-duration: 19s; }
+
   </style>
 </head>
 <body>
-
-  <header>
-    <div><h2>Almaaz Arabic</h2></div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#menu">Menu</a>
-      <a href="#order">Order</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <div class="hero">
-    <h1>Experience the Authentic Taste </h1>
+  <div class="container">
+    <h1>Almaaz Arabic</h1>
+    <p>Our kitchen is cooking up something amazing...<br>Website is under construction.</p>
   </div>
 
-  <section id="about">
-    <h2 style="text-align:center;">Who We Are</h2>
-    <p style="max-width: 800px; margin: auto; font-size: 1.2rem; text-align: center;">
-      Almaaz Arabic is a culinary journey into the heart of traditional Arabic cuisine. 
-      We serve freshly prepared meals with the finest spices, herbs, and flavors directly from the Middle East. 
-      Perfectly suited for those who crave authenticity.
-    </p>
-  </section>
-
-  <section id="menu">
-    <h2 style="text-align:center;">Signature Dishes</h2>
-    <div class="menu">
-      <div class="dish">
-        <img src="https://images.unsplash.com/photo-1604908176873-0acbbfc9e90a?auto=format&fit=crop&w=800&q=80" alt="Mandi">
-        <h3>Chicken Mandi</h3>
-        <p>Traditional Yemeni rice with succulent chicken, slow-cooked to perfection.</p>
-      </div>
-      <div class="dish">
-        <img src="https://images.unsplash.com/photo-1617196037845-7857e4a4a1cf?auto=format&fit=crop&w=800&q=80" alt="Kebabs">
-        <h3>Mixed Grill</h3>
-        <p>A platter of juicy kebabs, kofta, and grilled chicken, served with garlic sauce.</p>
-      </div>
-      <div class="dish">
-        <img src="https://images.unsplash.com/photo-1612916485534-040b1a87a425?auto=format&fit=crop&w=800&q=80" alt="Shawarma">
-        <h3>Shawarma Wrap</h3>
-        <p>Soft pita filled with spiced meat, pickles, and creamy tahini sauce.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="order">
-    <div class="cta">
-      <h2>Ready to Order?</h2>
-      <p>Call us or WhatsApp at <strong>+91 90372 15779</strong><br>We deliver across Kozhikode!</p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2 style="text-align:center;">Contact Us</h2>
-    <p style="text-align:center;">📍 Kozhikode – West Hill, Kerala<br>📧 admin@almaazarabic.com</p>
-  </section>
-
-  <footer>
-    &copy; 2025 Almaaz Arabic. All rights reserved.
-  </footer>
-
+  <div class="bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
 </body>
 </html>
